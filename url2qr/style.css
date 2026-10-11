@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --mx: 50%;
+    --my: 50%;
+}
+
+body {
+    font-family: 'Malgun Gothic', Arial, sans-serif;
+    min-height: 100vh;
+    color: #3a2e00;
+    /* 마우스 위치(--mx, --my)에 따라 그라데이션 중심이 이동 */
+    background:
+        radial-gradient(circle at var(--mx) var(--my), rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0) 45%),
+        linear-gradient(135deg, var(--c1, #fff6d5) 0%, var(--c2, #ffe082) 50%, var(--c3, #ffd1a6) 100%);
+    background-attachment: fixed;
+    transition: background 0.2s ease;
+}
+
+.header {
+    padding: 20px 24px;
+}
+
+.logo {
+    height: 44px;
+    display: block;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 84px);
+    padding: 0 16px 40px;
+    gap: 24px;
+}
+
+.url-form {
+    display: flex;
+    width: 100%;
+    max-width: 560px;
+    background: #fff;
+    border-radius: 999px;
+    box-shadow: 0 6px 24px rgba(180, 130, 0, 0.18);
+    overflow: hidden;
+    transition: transform 0.5s ease;
+}
+
+.url-input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    outline: none;
+    padding: 16px 22px;
+    font-size: 16px;
+}
+
+.submit-btn {
+    border: none;
+    background: #ffc107;
+    color: #3a2e00;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 0 28px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background: #ffb300;
+}
+
+.qr-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    animation: fadeIn 0.5s ease;
+}
+
+.qr-section[hidden] {
+    display: none;
+}
+
+.qr-code {
+    background: #fff;
+    padding: 18px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(180, 130, 0, 0.25);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.qr-code:hover {
+    transform: scale(1.03);
+}
+
+.qr-code img,
+.qr-code canvas {
+    display: block;
+}
+
+.qr-hint {
+    font-size: 14px;
+    color: #6b5800;
+}
+
+.error-msg {
+    color: #c62828;
+    font-size: 14px;
+    min-height: 1em;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

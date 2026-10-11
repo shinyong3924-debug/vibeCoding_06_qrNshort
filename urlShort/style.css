@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Malgun Gothic', Arial, sans-serif;
+    min-height: 100vh;
+    color: #3a2e00;
+    background: linear-gradient(135deg, #fff6d5 0%, #ffe082 50%, #ffd1a6 100%);
+}
+
+.header {
+    padding: 20px 24px;
+}
+
+.back {
+    color: #6b5800;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back:hover {
+    text-decoration: underline;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6vh 16px 40px;
+}
+
+.title {
+    font-size: 32px;
+    margin-bottom: 24px;
+}
+
+.card {
+    width: 100%;
+    max-width: 600px;
+    background: #fff;
+    border-radius: 18px;
+    padding: 28px;
+    box-shadow: 0 6px 24px rgba(180, 130, 0, 0.18);
+}
+
+.label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 4px 0 8px;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.input {
+    flex: 1;
+    min-width: 0;
+    padding: 12px 14px;
+    font-size: 15px;
+    border: 1px solid #e0d3a0;
+    border-radius: 10px;
+    outline: none;
+}
+
+.input:focus {
+    border-color: #ffb300;
+}
+
+.input[readonly] {
+    background: #fffbea;
+}
+
+.btn {
+    padding: 0 18px;
+    font-size: 15px;
+    font-weight: bold;
+    border: 1px solid #e0d3a0;
+    border-radius: 10px;
+    background: #fff;
+    color: #3a2e00;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.btn.primary {
+    background: #ffc107;
+    border-color: #ffc107;
+}
+
+.btn:hover:not(:disabled) {
+    filter: brightness(0.95);
+}
+
+.btn:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+.message {
+    min-height: 1.2em;
+    font-size: 14px;
+}
+
+.message.error {
+    color: #c62828;
+}
+
+@media (max-width: 480px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .btn {
+        height: 44px;
+    }
+}

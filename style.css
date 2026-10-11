@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Malgun Gothic', Arial, sans-serif;
+    min-height: 100vh;
+    color: #3a2e00;
+    background: linear-gradient(135deg, #fff6d5 0%, #ffe082 50%, #ffd1a6 100%);
+}
+
+.home {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 16px;
+    text-align: center;
+}
+
+.title {
+    font-size: 48px;
+    letter-spacing: 1px;
+}
+
+.title span {
+    color: #ff8f00;
+}
+
+.subtitle {
+    margin-top: 10px;
+    color: #6b5800;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.menu-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 220px;
+    padding: 28px 20px;
+    background: #fff;
+    border-radius: 18px;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 6px 24px rgba(180, 130, 0, 0.18);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.menu-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(180, 130, 0, 0.28);
+}
+
+.menu-icon {
+    font-size: 36px;
+}
+
+.menu-label {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.menu-desc {
+    font-size: 13px;
+    color: #7a6a2a;
+}
